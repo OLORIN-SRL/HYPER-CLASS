@@ -137,7 +137,7 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+<!-- ## Contact -->
 
 <!-- Francesco Solinas - francesco.solinas@olorin.tech
 
