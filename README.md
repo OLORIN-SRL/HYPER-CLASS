@@ -72,6 +72,8 @@ Also, remember to check the directory structure:
  │   ├── 📂 val/            # Validation images
  ├── 📂 models/             # Trained models
  │   ├── efficientnet_model.pth
+ |   ├── .
+ |   ├── .
  ├── 📂 scripts/            # Training and testing scripts
  │   ├── train.py
  │   ├── test.py
