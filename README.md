@@ -9,7 +9,9 @@ Hyperspectral Imaging (HSI) is the method of capturing and processing the inform
 
 There are many different fabrics in the textile industry, which may have some differences in normal imaging. We propose that by using HSI and processing the acquired data, we can extract more features for each fabric, which helps to distinguish them from each other better and more effective.
 
-The classifier that we propose consists of a pre-trained backbone and some additional layers. We use the backbone for a technique named Transfer Learning, in which we pick a model that is pre-trained on a big dataset such as ImageNet, and then we adapt it to our classification problem. To do so, we fine-tune the last layers of the backbone, which means we unfreeze them to be trained with our dataset to adjust the specific task better. Also, before the final classification layer, we add 50% dropout layer, which ignores a portion of the neurons to prevent the model from overfitting on the training data and helps it to generalize better on the data. Another useful step that we put in the classifier is to include data augmentation, which is dataset expansion by applying the random realistic transformations such as rotations and flips, to reduce the risk of overfitting on the data. The structure of our classifier is adjustable and scalable, and it can easily integrate with HSI technique with different filters and band length, without changing the whole structure.
+The classifier that we propose consists of a pre-trained backbone and some additional layers. We use the backbone for a technique named Transfer Learning, in which we pick a model that is pre-trained on a big dataset such as ImageNet, and then we adapt it to our classification problem. To do so, we fine-tune the last layers of the backbone, which means we unfreeze them to be trained with our dataset to adjust the specific task better. Also, before the final classification layer, we add 50% dropout layer, which ignores a portion of the neurons to prevent the model from overfitting on the training data and helps it to generalize better on the data. Another useful step that we put in the classifier is to include data augmentation, which is dataset expansion by applying the random realistic transformations such as rotations and flips, to reduce the risk of overfitting on the data. 
+
+The structure of our classifier is adjustable and scalable, and it can easily integrate with HSI technique with different filters and band length, without changing the whole structure. It can accept both normal RGB images(which have (H,W,3) shape), and Hyperspectral images(which can be interpreted as (H,W,1,N), where N is the number of channels). With this structure, it is possible to pass all the Hyperspectral images from different channels to the model, or simply passing their average image which is a normal RGB image. In both scenarios, our classifier is able to distinguish between different classes of data.
 
 We anticipate that HSI data can help the feature extraction phase of our classifier, and this added information from HSI will help to have a more robust and reliable classification of different fabrics, and can outperform the conventional classifiers which were trained on the normal RGB images.
 
@@ -50,7 +52,16 @@ We did the project with Python 3.12.4 and on Ubuntu 22.04.
    ```sh
    pip install torch torchvision scikit-learn numpy argparse 
    ```
-
+3. Run the training script
+   ```sh
+   python train.py --train_dir ../data/train --val_dir ../data/val \--model_save_path best_model.pth --img_size [300, 300] --batch_size 32 -epochs 20 --learning_rate 1e-4 --patience 5
+   ```
+   Note that training directory and validation directory must be passed as arguments, but for the rest, you can simply skip them and the script will use default values.
+4. Run the inference script
+   ```sh
+   python inference.py --model_path best_model.pth --test_dir ./videos_split/test --img_size [300, 300] --batch_size 32
+   ```
+   Note that test directory and model path must be passed as arguments, but for the rest, you can simply skip them and the script will use default values.
 
 Also, remember to check the directory structure:
 ```plaintext
@@ -93,7 +104,7 @@ See the [open issues](https://github.com/OLORIN-SRL/HYPER-CLASS/issues) for a fu
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+<!-- ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -112,27 +123,27 @@ Don't forget to give the project a star! Thanks again!
 
 <a href="https://github.com/OLORIN-SRL/HYPER-CLASS/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=OLORIN-SRL/HYPER-CLASS" alt="contrib.rocks image" />
-</a>
+</a> -->
 
 
 
 <!-- LICENSE -->
-## License
+<!-- ## License
 
 Distributed under the project_license. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Francesco Solinas - francesco.solinas@olorin.tech
+<!-- Francesco Solinas - francesco.solinas@olorin.tech
 
 Project Link: [https://github.com/OLORIN-SRL/HYPER-CLASS](https://github.com/OLORIN-SRL/HYPER-CLASS)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
