@@ -87,8 +87,13 @@ Also, remember to check the directory structure:
 <!-- USAGE EXAMPLES -->
 ## Results
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Here are the performance metrics on training and valdiation sets.
 
+![Accuracy_TV](Images/Accuracy.png)
+![Precision_TV](Images/Precision.png)
+![Recall_TV](Images/Recall.png)
+![F1_TV](Images/F1.png)
+![Loss_TV](Images/Loss.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
