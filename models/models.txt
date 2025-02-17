@@ -1,0 +1,3 @@
+EfficientNetV2S:
+
+https://drive.google.com/file/d/1La6h3inajQzgPNuDwWBfvW2776FtmOq7/view?usp=drive_link
