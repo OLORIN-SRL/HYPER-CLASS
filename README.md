@@ -112,7 +112,7 @@ And here is the report for the inference on the test set.
 
 <!-- See the [open issues](https://github.com/OLORIN-SRL/HYPER-CLASS/issues) for a full list of proposed features (and known issues). -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
 
