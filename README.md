@@ -96,7 +96,7 @@ Here are the performance metrics on training and valdiation sets.
 ![Loss_TV](Images/Loss.png) -->
 
 
-And here is the report for the inference on the test set.
+<!-- And here is the report for the inference on the test set. -->
 
 
 <!-- ![Test](Images/Test.png) -->
