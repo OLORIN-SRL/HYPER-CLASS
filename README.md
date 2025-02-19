@@ -99,7 +99,7 @@ Here are the performance metrics on training and valdiation sets.
 And here is the report for the inference on the test set.
 
 
-![Test](Images/Test.png)
+<!-- ![Test](Images/Test.png) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
