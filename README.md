@@ -1,4 +1,4 @@
-## About The Project
+## About The HYPER-CLASS Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
