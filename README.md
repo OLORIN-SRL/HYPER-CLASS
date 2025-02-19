@@ -90,10 +90,10 @@ Also, remember to check the directory structure:
 Here are the performance metrics on training and valdiation sets.
 
 ![Accuracy_TV](Images/Accuracy.png)
-![Precision_TV](Images/Precision.png)
+<!-- ![Precision_TV](Images/Precision.png)
 ![Recall_TV](Images/Recall.png)
 ![F1_TV](Images/F1.png)
-![Loss_TV](Images/Loss.png)
+![Loss_TV](Images/Loss.png) -->
 
 
 And here is the report for the inference on the test set.
